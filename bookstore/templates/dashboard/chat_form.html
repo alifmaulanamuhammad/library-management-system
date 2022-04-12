@@ -1,0 +1,35 @@
+{% extends 'dashboard/base.html' %} {% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3" >
+    </div>
+
+    <div class="col-sm-6" style="padding-top: 20px;">
+      <div class="card" >
+        <div class="card-body bg-dark text-dark">
+          <div class="row" >
+            <div class="card col-md-8" >
+              <p>Welcome To BookApp Group Chat</p>
+            </div>
+            <div class="col-md-12">
+              <div class="">
+                <form method="POST" >
+                  {% csrf_token %} {{ form.as_p }}
+
+                  <br /><input
+                    type="submit"
+                    value="Post"
+                    class=" btn btn-light"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
